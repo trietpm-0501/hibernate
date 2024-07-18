@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Cấu hình kết nối database -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/it1</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">1</property>
+
+        <!-- Cấu hình đẩy và nhận dữ liệu -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Hiển thị các câu lệnh SQL được sinh ra -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Khai báo lớp thực thể -->
+        <mapping class="Maven243.NhanVien"/>
+    </session-factory>
+</hibernate-configuration>
